@@ -1,0 +1,6 @@
+.vscode
+.DS_Store
+__pycache__/
+dl_cw_1.ipynb
+.OTTER_LOG
+test/*
