@@ -1,6 +1,6 @@
 .vscode
 .DS_Store
 __pycache__/
-.ipynb
+dl_cw_1.ipynb
 .OTTER_LOG
 tests/*
