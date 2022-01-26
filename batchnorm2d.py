@@ -25,8 +25,6 @@ class BatchNorm2d(nn.Module):
         self.eps = eps
         self.momentum = momentum
 
-        # self.register_parameter is not used as it was mentioned on piazza
-        # that this will be overridden
         # By default, the elements of γ are set to 1 and the elements of β are set to 0
         self.gamma = torch.ones(size=(1,num_features,1,1))  # shape (1, C, 1, 1)
         self.beta = torch.zeros(size=(1,num_features,1,1))  # shape (1, C, 1, 1)
