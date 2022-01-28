@@ -151,5 +151,5 @@ if __name__ == "__main__":
     
     x = torch.ones(size=(10, 3, 120, 120))
     resnet18d = ResNet18C(ResidualBlock)
-    out = resnet18d(x)
+    out = resnet18c(x)
     print(out.size())
