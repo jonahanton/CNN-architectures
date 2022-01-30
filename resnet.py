@@ -1,26 +1,24 @@
 """
 Implementations of:
-i. ResNet-18 - arXiv:1512.03385
-ii. ResNet-18-C - arXiv:1812.01187
-
-Author: Jonah Anton
+i. ResNet18 - arXiv:1512.03385
+ii. ResNet18C/D - arXiv:1812.01187
 """
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.nn import Conv2d
+
 
 class ResidualBlock(nn.Module): 
     def __init__(self, inchannel, outchannel, stride=1): 
         
         super(ResidualBlock, self).__init__() 
         
-        self.left = nn.Sequential(Conv2d(inchannel, outchannel, kernel_size=3, 
+        self.left = nn.Sequential(nn.Conv2d(inchannel, outchannel, kernel_size=3, 
                                          stride=stride, padding=1, bias=False), 
                                   nn.BatchNorm2d(outchannel), 
                                   nn.ReLU(inplace=True), 
-                                  Conv2d(outchannel, outchannel, kernel_size=3, 
+                                  nn.Conv2d(outchannel, outchannel, kernel_size=3, 
                                          stride=1, padding=1, bias=False), 
                                   nn.BatchNorm2d(outchannel)) 
         
@@ -28,10 +26,42 @@ class ResidualBlock(nn.Module):
         
         if stride != 1 or inchannel != outchannel: 
             
-            self.shortcut = nn.Sequential(Conv2d(inchannel, outchannel, 
+            self.shortcut = nn.Sequential(nn.Conv2d(inchannel, outchannel, 
                                                  kernel_size=1, stride=stride, 
                                                  padding = 0, bias=False), 
                                           nn.BatchNorm2d(outchannel) ) 
+            
+    def forward(self, x): 
+        
+        out = self.left(x) 
+        out += self.shortcut(x) 
+        out = F.relu(out) 
+        
+        return out
+
+
+class ResidualBlockTweaked(nn.Module): 
+    def __init__(self, inchannel, outchannel, stride=1): 
+        
+        super(ResidualBlock, self).__init__() 
+        
+        self.left = nn.Sequential(nn.Conv2d(inchannel, outchannel, kernel_size=3, 
+                                         stride=stride, padding=1, bias=False), 
+                                  nn.BatchNorm2d(outchannel), 
+                                  nn.ReLU(inplace=True), 
+                                  nn.Conv2d(outchannel, outchannel, kernel_size=3, 
+                                         stride=1, padding=1, bias=False), 
+                                  nn.BatchNorm2d(outchannel)) 
+        
+        self.shortcut = nn.Sequential() 
+        
+        if stride != 1 or inchannel != outchannel: 
+            
+            self.shortcut = nn.Sequential(nn.AvgPool2d(kernel_size=2, stride=2),
+                                          nn.Conv2d(inchannel, outchannel, 
+                                                 kernel_size=1, stride=1, 
+                                                 padding = 0, bias=False), 
+                                          nn.BatchNorm2d(outchannel)) 
             
     def forward(self, x): 
         
@@ -49,7 +79,7 @@ class ResNet18(nn.Module):
         super(ResNet18, self).__init__()
         
         self.inchannel = 64
-        self.conv1 = nn.Sequential(Conv2d(3, 64, kernel_size = 7, stride = 2,
+        self.conv1 = nn.Sequential(nn.Conv2d(3, 64, kernel_size = 7, stride = 2,
                                             padding = 3, bias = False), 
                                   nn.BatchNorm2d(64),
                                   nn.ReLU(inplace=True))
@@ -97,7 +127,7 @@ class ResNet18C(nn.Module):
         super(ResNet18C, self).__init__()
         
         self.inchannel = 64
-        self.conv1 = nn.Sequential(Conv2d(3, 32, kernel_size = 3, stride = 2,
+        self.conv1 = nn.Sequential(nn.Conv2d(3, 32, kernel_size = 3, stride = 2,
                                             padding = 1, bias = False), 
                                 nn.BatchNorm2d(32),
                                 nn.ReLU(inplace=True),
@@ -147,9 +177,12 @@ class ResNet18C(nn.Module):
         return x
 
 
+class ResNet18D(ResNet18):
+
+    def __init__(self):
+        super().__init__(ResidualBlock=ResidualBlockTweaked)
+
+
+
 if __name__ == "__main__":
-    
-    x = torch.ones(size=(10, 3, 120, 120))
-    resnet18d = ResNet18C(ResidualBlock)
-    out = resnet18c(x)
-    print(out.size())
+    pass
