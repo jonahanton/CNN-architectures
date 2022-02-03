@@ -1,0 +1,502 @@
+Data augmentations -
+                    transforms.RandomHorizontalFlip(p=0.5),
+                    transforms.ColorJitter(),
+                    transforms.RandomResizedCrop(size=256, scale=(0.6, 1))
+
+Model arch - 
+    ResNet18D
+
+Model params - 
+    batch size - 128
+    optimizer - Adamax
+    scheduler - CosineAnnealingLR
+    lr - 1e-3
+    weight decay - 1e-3
+    epochs - 30 
+
+
+Output - 
+
+Total number of parameters is: 11186772
+Epoch: 0, Iteration 0, loss = 3.0923
+Epoch: 0, Iteration 10, loss = 2.6787
+Epoch: 0, Iteration 20, loss = 2.2898
+Epoch: 0, Iteration 30, loss = 2.4119
+Epoch: 0, Iteration 40, loss = 2.3312
+Epoch: 0, Iteration 50, loss = 2.2909
+Epoch: 0, Iteration 60, loss = 2.0797
+Epoch: 0, Iteration 70, loss = 2.1328
+Epoch: 0, Iteration 80, loss = 2.1637
+Epoch: 0, Iteration 90, loss = 1.8697
+Epoch: 0, Iteration 100, loss = 2.0075
+Epoch: 0, Iteration 110, loss = 1.8668
+Epoch: 0, Iteration 120, loss = 1.8367
+Epoch: 0, Iteration 130, loss = 1.8908
+Epoch: 0, Iteration 140, loss = 1.7810
+Got 592 / 1998 correct of val set (29.63)
+Epoch: 1, Iteration 0, loss = 1.6405
+Epoch: 1, Iteration 10, loss = 1.7509
+Epoch: 1, Iteration 20, loss = 1.5249
+Epoch: 1, Iteration 30, loss = 1.5029
+Epoch: 1, Iteration 40, loss = 1.5810
+Epoch: 1, Iteration 50, loss = 1.6109
+Epoch: 1, Iteration 60, loss = 1.6614
+Epoch: 1, Iteration 70, loss = 1.5713
+Epoch: 1, Iteration 80, loss = 1.6082
+Epoch: 1, Iteration 90, loss = 1.5116
+Epoch: 1, Iteration 100, loss = 1.5860
+Epoch: 1, Iteration 110, loss = 1.4932
+Epoch: 1, Iteration 120, loss = 1.4577
+Epoch: 1, Iteration 130, loss = 1.5121
+Epoch: 1, Iteration 140, loss = 1.5165
+Got 864 / 1998 correct of val set (43.24)
+Epoch: 2, Iteration 0, loss = 1.4728
+Epoch: 2, Iteration 10, loss = 1.2340
+Epoch: 2, Iteration 20, loss = 1.4257
+Epoch: 2, Iteration 30, loss = 1.3788
+Epoch: 2, Iteration 40, loss = 1.5137
+Epoch: 2, Iteration 50, loss = 1.5168
+Epoch: 2, Iteration 60, loss = 1.1931
+Epoch: 2, Iteration 70, loss = 1.1412
+Epoch: 2, Iteration 80, loss = 1.1022
+Epoch: 2, Iteration 90, loss = 1.2758
+Epoch: 2, Iteration 100, loss = 1.2581
+Epoch: 2, Iteration 110, loss = 1.2906
+Epoch: 2, Iteration 120, loss = 1.4352
+Epoch: 2, Iteration 130, loss = 1.4273
+Epoch: 2, Iteration 140, loss = 1.0277
+Got 951 / 1998 correct of val set (47.60)
+Epoch: 3, Iteration 0, loss = 1.0493
+Epoch: 3, Iteration 10, loss = 1.4986
+Epoch: 3, Iteration 20, loss = 1.4671
+Epoch: 3, Iteration 30, loss = 0.9945
+Epoch: 3, Iteration 40, loss = 1.1293
+Epoch: 3, Iteration 50, loss = 1.0995
+Epoch: 3, Iteration 60, loss = 1.0260
+Epoch: 3, Iteration 70, loss = 1.2630
+Epoch: 3, Iteration 80, loss = 0.9564
+Epoch: 3, Iteration 90, loss = 1.1599
+Epoch: 3, Iteration 100, loss = 0.8417
+Epoch: 3, Iteration 110, loss = 1.2762
+Epoch: 3, Iteration 120, loss = 0.9441
+Epoch: 3, Iteration 130, loss = 1.1044
+Epoch: 3, Iteration 140, loss = 1.4916
+Got 1091 / 1998 correct of val set (54.60)
+Epoch: 4, Iteration 0, loss = 0.9153
+Epoch: 4, Iteration 10, loss = 1.0049
+Epoch: 4, Iteration 20, loss = 0.9764
+Epoch: 4, Iteration 30, loss = 1.0558
+Epoch: 4, Iteration 40, loss = 0.9169
+Epoch: 4, Iteration 50, loss = 1.0409
+Epoch: 4, Iteration 60, loss = 1.1124
+Epoch: 4, Iteration 70, loss = 1.0960
+Epoch: 4, Iteration 80, loss = 1.1262
+Epoch: 4, Iteration 90, loss = 1.0387
+Epoch: 4, Iteration 100, loss = 1.0472
+Epoch: 4, Iteration 110, loss = 1.1328
+Epoch: 4, Iteration 120, loss = 0.8690
+Epoch: 4, Iteration 130, loss = 0.9385
+Epoch: 4, Iteration 140, loss = 0.9334
+Got 1123 / 1998 correct of val set (56.21)
+Epoch: 5, Iteration 0, loss = 0.9807
+Epoch: 5, Iteration 10, loss = 0.9797
+Epoch: 5, Iteration 20, loss = 0.9562
+Epoch: 5, Iteration 30, loss = 0.8245
+Epoch: 5, Iteration 40, loss = 1.0442
+Epoch: 5, Iteration 50, loss = 1.0472
+Epoch: 5, Iteration 60, loss = 1.0431
+Epoch: 5, Iteration 70, loss = 1.1499
+Epoch: 5, Iteration 80, loss = 0.9958
+Epoch: 5, Iteration 90, loss = 1.1416
+Epoch: 5, Iteration 100, loss = 0.7874
+Epoch: 5, Iteration 110, loss = 0.9039
+Epoch: 5, Iteration 120, loss = 0.8611
+Epoch: 5, Iteration 130, loss = 0.8682
+Epoch: 5, Iteration 140, loss = 0.7904
+Got 1232 / 1998 correct of val set (61.66)
+Epoch: 6, Iteration 0, loss = 0.9415
+Epoch: 6, Iteration 10, loss = 1.0138
+Epoch: 6, Iteration 20, loss = 0.9423
+Epoch: 6, Iteration 30, loss = 0.6381
+Epoch: 6, Iteration 40, loss = 0.8567
+Epoch: 6, Iteration 50, loss = 0.8426
+Epoch: 6, Iteration 60, loss = 0.8107
+Epoch: 6, Iteration 70, loss = 1.0163
+Epoch: 6, Iteration 80, loss = 0.9526
+Epoch: 6, Iteration 90, loss = 0.9451
+Epoch: 6, Iteration 100, loss = 1.0417
+Epoch: 6, Iteration 110, loss = 0.7303
+Epoch: 6, Iteration 120, loss = 1.0179
+Epoch: 6, Iteration 130, loss = 0.7316
+Epoch: 6, Iteration 140, loss = 0.7285
+Got 1351 / 1998 correct of val set (67.62)
+Epoch: 7, Iteration 0, loss = 0.9419
+Epoch: 7, Iteration 10, loss = 0.6576
+Epoch: 7, Iteration 20, loss = 0.7953
+Epoch: 7, Iteration 30, loss = 0.8976
+Epoch: 7, Iteration 40, loss = 0.7113
+Epoch: 7, Iteration 50, loss = 0.9632
+Epoch: 7, Iteration 60, loss = 0.6908
+Epoch: 7, Iteration 70, loss = 0.7170
+Epoch: 7, Iteration 80, loss = 1.0170
+Epoch: 7, Iteration 90, loss = 0.6354
+Epoch: 7, Iteration 100, loss = 0.6929
+Epoch: 7, Iteration 110, loss = 0.6075
+Epoch: 7, Iteration 120, loss = 0.7708
+Epoch: 7, Iteration 130, loss = 0.5678
+Epoch: 7, Iteration 140, loss = 0.8974
+Got 1143 / 1998 correct of val set (57.21)
+Epoch: 8, Iteration 0, loss = 0.8137
+Epoch: 8, Iteration 10, loss = 0.7548
+Epoch: 8, Iteration 20, loss = 0.9423
+Epoch: 8, Iteration 30, loss = 0.7142
+Epoch: 8, Iteration 40, loss = 0.6875
+Epoch: 8, Iteration 50, loss = 0.6796
+Epoch: 8, Iteration 60, loss = 0.8278
+Epoch: 8, Iteration 70, loss = 0.5820
+Epoch: 8, Iteration 80, loss = 0.4517
+Epoch: 8, Iteration 90, loss = 0.5843
+Epoch: 8, Iteration 100, loss = 0.6658
+Epoch: 8, Iteration 110, loss = 0.7183
+Epoch: 8, Iteration 120, loss = 0.7466
+Epoch: 8, Iteration 130, loss = 0.5107
+Epoch: 8, Iteration 140, loss = 0.6487
+Got 1292 / 1998 correct of val set (64.66)
+Epoch: 9, Iteration 0, loss = 0.5501
+Epoch: 9, Iteration 10, loss = 0.5779
+Epoch: 9, Iteration 20, loss = 0.6134
+Epoch: 9, Iteration 30, loss = 0.6392
+Epoch: 9, Iteration 40, loss = 0.8560
+Epoch: 9, Iteration 50, loss = 0.6685
+Epoch: 9, Iteration 60, loss = 0.5970
+Epoch: 9, Iteration 70, loss = 0.8221
+Epoch: 9, Iteration 80, loss = 0.6400
+Epoch: 9, Iteration 90, loss = 0.6564
+Epoch: 9, Iteration 100, loss = 0.6598
+Epoch: 9, Iteration 110, loss = 0.6959
+Epoch: 9, Iteration 120, loss = 0.5316
+Epoch: 9, Iteration 130, loss = 0.6665
+Epoch: 9, Iteration 140, loss = 0.6705
+Got 1328 / 1998 correct of val set (66.47)
+Epoch: 10, Iteration 0, loss = 0.8517
+Epoch: 10, Iteration 10, loss = 0.4698
+Epoch: 10, Iteration 20, loss = 0.6887
+Epoch: 10, Iteration 30, loss = 0.5470
+Epoch: 10, Iteration 40, loss = 0.6450
+Epoch: 10, Iteration 50, loss = 0.6508
+Epoch: 10, Iteration 60, loss = 0.6373
+Epoch: 10, Iteration 70, loss = 0.6053
+Epoch: 10, Iteration 80, loss = 0.5618
+Epoch: 10, Iteration 90, loss = 0.7150
+Epoch: 10, Iteration 100, loss = 0.7345
+Epoch: 10, Iteration 110, loss = 0.5652
+Epoch: 10, Iteration 120, loss = 0.5829
+Epoch: 10, Iteration 130, loss = 0.6109
+Epoch: 10, Iteration 140, loss = 0.9675
+Got 1266 / 1998 correct of val set (63.36)
+Epoch: 11, Iteration 0, loss = 0.5506
+Epoch: 11, Iteration 10, loss = 0.5570
+Epoch: 11, Iteration 20, loss = 0.6017
+Epoch: 11, Iteration 30, loss = 0.6265
+Epoch: 11, Iteration 40, loss = 0.5030
+Epoch: 11, Iteration 50, loss = 0.5764
+Epoch: 11, Iteration 60, loss = 0.6019
+Epoch: 11, Iteration 70, loss = 0.7589
+Epoch: 11, Iteration 80, loss = 0.5031
+Epoch: 11, Iteration 90, loss = 0.5328
+Epoch: 11, Iteration 100, loss = 0.6954
+Epoch: 11, Iteration 110, loss = 0.5490
+Epoch: 11, Iteration 120, loss = 0.3865
+Epoch: 11, Iteration 130, loss = 0.6217
+Epoch: 11, Iteration 140, loss = 0.5580
+Got 1459 / 1998 correct of val set (73.02)
+Epoch: 12, Iteration 0, loss = 0.5783
+Epoch: 12, Iteration 10, loss = 0.5327
+Epoch: 12, Iteration 20, loss = 0.6552
+Epoch: 12, Iteration 30, loss = 0.4749
+Epoch: 12, Iteration 40, loss = 0.6069
+Epoch: 12, Iteration 50, loss = 0.4882
+Epoch: 12, Iteration 60, loss = 0.6456
+Epoch: 12, Iteration 70, loss = 0.3495
+Epoch: 12, Iteration 80, loss = 0.7855
+Epoch: 12, Iteration 90, loss = 0.6113
+Epoch: 12, Iteration 100, loss = 0.6338
+Epoch: 12, Iteration 110, loss = 0.6501
+Epoch: 12, Iteration 120, loss = 0.6185
+Epoch: 12, Iteration 130, loss = 0.6801
+Epoch: 12, Iteration 140, loss = 0.5402
+Got 1441 / 1998 correct of val set (72.12)
+Epoch: 13, Iteration 0, loss = 0.4752
+Epoch: 13, Iteration 10, loss = 0.4528
+Epoch: 13, Iteration 20, loss = 0.5679
+Epoch: 13, Iteration 30, loss = 0.4751
+Epoch: 13, Iteration 40, loss = 0.5131
+Epoch: 13, Iteration 50, loss = 0.3456
+Epoch: 13, Iteration 60, loss = 0.5602
+Epoch: 13, Iteration 70, loss = 0.4693
+Epoch: 13, Iteration 80, loss = 0.6775
+Epoch: 13, Iteration 90, loss = 0.7039
+Epoch: 13, Iteration 100, loss = 0.6078
+Epoch: 13, Iteration 110, loss = 0.5487
+Epoch: 13, Iteration 120, loss = 0.5934
+Epoch: 13, Iteration 130, loss = 0.4565
+Epoch: 13, Iteration 140, loss = 0.5531
+Got 1490 / 1998 correct of val set (74.57)
+Epoch: 14, Iteration 0, loss = 0.5106
+Epoch: 14, Iteration 10, loss = 0.4406
+Epoch: 14, Iteration 20, loss = 0.5005
+Epoch: 14, Iteration 30, loss = 0.4682
+Epoch: 14, Iteration 40, loss = 0.3677
+Epoch: 14, Iteration 50, loss = 0.4387
+Epoch: 14, Iteration 60, loss = 0.5722
+Epoch: 14, Iteration 70, loss = 0.4849
+Epoch: 14, Iteration 80, loss = 0.4655
+Epoch: 14, Iteration 90, loss = 0.2940
+Epoch: 14, Iteration 100, loss = 0.3599
+Epoch: 14, Iteration 110, loss = 0.4517
+Epoch: 14, Iteration 120, loss = 0.5177
+Epoch: 14, Iteration 130, loss = 0.4738
+Epoch: 14, Iteration 140, loss = 0.4531
+Got 1477 / 1998 correct of val set (73.92)
+Epoch: 15, Iteration 0, loss = 0.2989
+Epoch: 15, Iteration 10, loss = 0.4224
+Epoch: 15, Iteration 20, loss = 0.4052
+Epoch: 15, Iteration 30, loss = 0.3106
+Epoch: 15, Iteration 40, loss = 0.3772
+Epoch: 15, Iteration 50, loss = 0.4199
+Epoch: 15, Iteration 60, loss = 0.5232
+Epoch: 15, Iteration 70, loss = 0.4582
+Epoch: 15, Iteration 80, loss = 0.4236
+Epoch: 15, Iteration 90, loss = 0.3344
+Epoch: 15, Iteration 100, loss = 0.4532
+Epoch: 15, Iteration 110, loss = 0.5275
+Epoch: 15, Iteration 120, loss = 0.4334
+Epoch: 15, Iteration 130, loss = 0.4479
+Epoch: 15, Iteration 140, loss = 0.6498
+Got 1511 / 1998 correct of val set (75.63)
+Epoch: 16, Iteration 0, loss = 0.5496
+Epoch: 16, Iteration 10, loss = 0.4975
+Epoch: 16, Iteration 20, loss = 0.3125
+Epoch: 16, Iteration 30, loss = 0.3551
+Epoch: 16, Iteration 40, loss = 0.4548
+Epoch: 16, Iteration 50, loss = 0.3855
+Epoch: 16, Iteration 60, loss = 0.2210
+Epoch: 16, Iteration 70, loss = 0.3856
+Epoch: 16, Iteration 80, loss = 0.5022
+Epoch: 16, Iteration 90, loss = 0.4320
+Epoch: 16, Iteration 100, loss = 0.5625
+Epoch: 16, Iteration 110, loss = 0.5517
+Epoch: 16, Iteration 120, loss = 0.4356
+Epoch: 16, Iteration 130, loss = 0.3283
+Epoch: 16, Iteration 140, loss = 0.6704
+Got 1392 / 1998 correct of val set (69.67)
+Epoch: 17, Iteration 0, loss = 0.4916
+Epoch: 17, Iteration 10, loss = 0.3396
+Epoch: 17, Iteration 20, loss = 0.4073
+Epoch: 17, Iteration 30, loss = 0.5034
+Epoch: 17, Iteration 40, loss = 0.4336
+Epoch: 17, Iteration 50, loss = 0.4787
+Epoch: 17, Iteration 60, loss = 0.3427
+Epoch: 17, Iteration 70, loss = 0.2889
+Epoch: 17, Iteration 80, loss = 0.4626
+Epoch: 17, Iteration 90, loss = 0.3590
+Epoch: 17, Iteration 100, loss = 0.5818
+Epoch: 17, Iteration 110, loss = 0.4074
+Epoch: 17, Iteration 120, loss = 0.4516
+Epoch: 17, Iteration 130, loss = 0.4734
+Epoch: 17, Iteration 140, loss = 0.3076
+Got 1524 / 1998 correct of val set (76.28)
+Epoch: 18, Iteration 0, loss = 0.3803
+Epoch: 18, Iteration 10, loss = 0.3921
+Epoch: 18, Iteration 20, loss = 0.3256
+Epoch: 18, Iteration 30, loss = 0.4027
+Epoch: 18, Iteration 40, loss = 0.3501
+Epoch: 18, Iteration 50, loss = 0.4598
+Epoch: 18, Iteration 60, loss = 0.3418
+Epoch: 18, Iteration 70, loss = 0.3613
+Epoch: 18, Iteration 80, loss = 0.4794
+Epoch: 18, Iteration 90, loss = 0.3737
+Epoch: 18, Iteration 100, loss = 0.3665
+Epoch: 18, Iteration 110, loss = 0.2342
+Epoch: 18, Iteration 120, loss = 0.4369
+Epoch: 18, Iteration 130, loss = 0.2888
+Epoch: 18, Iteration 140, loss = 0.4735
+Got 1546 / 1998 correct of val set (77.38)
+Epoch: 19, Iteration 0, loss = 0.4768
+Epoch: 19, Iteration 10, loss = 0.2760
+Epoch: 19, Iteration 20, loss = 0.4226
+Epoch: 19, Iteration 30, loss = 0.3315
+Epoch: 19, Iteration 40, loss = 0.2920
+Epoch: 19, Iteration 50, loss = 0.4433
+Epoch: 19, Iteration 60, loss = 0.2819
+Epoch: 19, Iteration 70, loss = 0.3370
+Epoch: 19, Iteration 80, loss = 0.3143
+Epoch: 19, Iteration 90, loss = 0.3783
+Epoch: 19, Iteration 100, loss = 0.3616
+Epoch: 19, Iteration 110, loss = 0.3383
+Epoch: 19, Iteration 120, loss = 0.4832
+Epoch: 19, Iteration 130, loss = 0.4202
+Epoch: 19, Iteration 140, loss = 0.4557
+Got 1596 / 1998 correct of val set (79.88)
+Epoch: 20, Iteration 0, loss = 0.4316
+Epoch: 20, Iteration 10, loss = 0.2907
+Epoch: 20, Iteration 20, loss = 0.3443
+Epoch: 20, Iteration 30, loss = 0.4796
+Epoch: 20, Iteration 40, loss = 0.3174
+Epoch: 20, Iteration 50, loss = 0.3948
+Epoch: 20, Iteration 60, loss = 0.2616
+Epoch: 20, Iteration 70, loss = 0.3388
+Epoch: 20, Iteration 80, loss = 0.3949
+Epoch: 20, Iteration 90, loss = 0.3895
+Epoch: 20, Iteration 100, loss = 0.2885
+Epoch: 20, Iteration 110, loss = 0.4054
+Epoch: 20, Iteration 120, loss = 0.3959
+Epoch: 20, Iteration 130, loss = 0.4603
+Epoch: 20, Iteration 140, loss = 0.2436
+Got 1393 / 1998 correct of val set (69.72)
+Epoch: 21, Iteration 0, loss = 0.4057
+Epoch: 21, Iteration 10, loss = 0.2180
+Epoch: 21, Iteration 20, loss = 0.3472
+Epoch: 21, Iteration 30, loss = 0.3374
+Epoch: 21, Iteration 40, loss = 0.2339
+Epoch: 21, Iteration 50, loss = 0.2771
+Epoch: 21, Iteration 60, loss = 0.3706
+Epoch: 21, Iteration 70, loss = 0.4268
+Epoch: 21, Iteration 80, loss = 0.3521
+Epoch: 21, Iteration 90, loss = 0.2629
+Epoch: 21, Iteration 100, loss = 0.4094
+Epoch: 21, Iteration 110, loss = 0.3892
+Epoch: 21, Iteration 120, loss = 0.4219
+Epoch: 21, Iteration 130, loss = 0.5116
+Epoch: 21, Iteration 140, loss = 0.3589
+Got 1510 / 1998 correct of val set (75.58)
+Epoch: 22, Iteration 0, loss = 0.3722
+Epoch: 22, Iteration 10, loss = 0.2166
+Epoch: 22, Iteration 20, loss = 0.3234
+Epoch: 22, Iteration 30, loss = 0.3929
+Epoch: 22, Iteration 40, loss = 0.2830
+Epoch: 22, Iteration 50, loss = 0.3062
+Epoch: 22, Iteration 60, loss = 0.1986
+Epoch: 22, Iteration 70, loss = 0.2903
+Epoch: 22, Iteration 80, loss = 0.3921
+Epoch: 22, Iteration 90, loss = 0.2903
+Epoch: 22, Iteration 100, loss = 0.3470
+Epoch: 22, Iteration 110, loss = 0.3904
+Epoch: 22, Iteration 120, loss = 0.3286
+Epoch: 22, Iteration 130, loss = 0.3780
+Epoch: 22, Iteration 140, loss = 0.4889
+Got 1512 / 1998 correct of val set (75.68)
+Epoch: 23, Iteration 0, loss = 0.3777
+Epoch: 23, Iteration 10, loss = 0.3556
+Epoch: 23, Iteration 20, loss = 0.2617
+Epoch: 23, Iteration 30, loss = 0.3055
+Epoch: 23, Iteration 40, loss = 0.4683
+Epoch: 23, Iteration 50, loss = 0.3145
+Epoch: 23, Iteration 60, loss = 0.3679
+Epoch: 23, Iteration 70, loss = 0.2484
+Epoch: 23, Iteration 80, loss = 0.2908
+Epoch: 23, Iteration 90, loss = 0.2507
+Epoch: 23, Iteration 100, loss = 0.4221
+Epoch: 23, Iteration 110, loss = 0.3137
+Epoch: 23, Iteration 120, loss = 0.3174
+Epoch: 23, Iteration 130, loss = 0.3951
+Epoch: 23, Iteration 140, loss = 0.4602
+Got 1487 / 1998 correct of val set (74.42)
+Epoch: 24, Iteration 0, loss = 0.2864
+Epoch: 24, Iteration 10, loss = 0.2102
+Epoch: 24, Iteration 20, loss = 0.4032
+Epoch: 24, Iteration 30, loss = 0.2091
+Epoch: 24, Iteration 40, loss = 0.2324
+Epoch: 24, Iteration 50, loss = 0.3561
+Epoch: 24, Iteration 60, loss = 0.1702
+Epoch: 24, Iteration 70, loss = 0.2314
+Epoch: 24, Iteration 80, loss = 0.2628
+Epoch: 24, Iteration 90, loss = 0.2807
+Epoch: 24, Iteration 100, loss = 0.3282
+Epoch: 24, Iteration 110, loss = 0.3253
+Epoch: 24, Iteration 120, loss = 0.2928
+Epoch: 24, Iteration 130, loss = 0.1967
+Epoch: 24, Iteration 140, loss = 0.3769
+Got 1503 / 1998 correct of val set (75.23)
+Epoch: 25, Iteration 0, loss = 0.2575
+Epoch: 25, Iteration 10, loss = 0.2685
+Epoch: 25, Iteration 20, loss = 0.2181
+Epoch: 25, Iteration 30, loss = 0.3148
+Epoch: 25, Iteration 40, loss = 0.2641
+Epoch: 25, Iteration 50, loss = 0.2208
+Epoch: 25, Iteration 60, loss = 0.1952
+Epoch: 25, Iteration 70, loss = 0.2599
+Epoch: 25, Iteration 80, loss = 0.2238
+Epoch: 25, Iteration 90, loss = 0.2981
+Epoch: 25, Iteration 100, loss = 0.3444
+Epoch: 25, Iteration 110, loss = 0.3287
+Epoch: 25, Iteration 120, loss = 0.2720
+Epoch: 25, Iteration 130, loss = 0.2711
+Epoch: 25, Iteration 140, loss = 0.3060
+Got 1664 / 1998 correct of val set (83.28)
+Epoch: 26, Iteration 0, loss = 0.2817
+Epoch: 26, Iteration 10, loss = 0.2136
+Epoch: 26, Iteration 20, loss = 0.3011
+Epoch: 26, Iteration 30, loss = 0.3281
+Epoch: 26, Iteration 40, loss = 0.2629
+Epoch: 26, Iteration 50, loss = 0.2681
+Epoch: 26, Iteration 60, loss = 0.2745
+Epoch: 26, Iteration 70, loss = 0.2582
+Epoch: 26, Iteration 80, loss = 0.2925
+Epoch: 26, Iteration 90, loss = 0.2846
+Epoch: 26, Iteration 100, loss = 0.1546
+Epoch: 26, Iteration 110, loss = 0.1957
+Epoch: 26, Iteration 120, loss = 0.1867
+Epoch: 26, Iteration 130, loss = 0.3432
+Epoch: 26, Iteration 140, loss = 0.1274
+Got 1595 / 1998 correct of val set (79.83)
+Epoch: 27, Iteration 0, loss = 0.2977
+Epoch: 27, Iteration 10, loss = 0.2260
+Epoch: 27, Iteration 20, loss = 0.2605
+Epoch: 27, Iteration 30, loss = 0.3402
+Epoch: 27, Iteration 40, loss = 0.2630
+Epoch: 27, Iteration 50, loss = 0.3462
+Epoch: 27, Iteration 60, loss = 0.2173
+Epoch: 27, Iteration 70, loss = 0.3525
+Epoch: 27, Iteration 80, loss = 0.2462
+Epoch: 27, Iteration 90, loss = 0.3479
+Epoch: 27, Iteration 100, loss = 0.1813
+Epoch: 27, Iteration 110, loss = 0.2859
+Epoch: 27, Iteration 120, loss = 0.3010
+Epoch: 27, Iteration 130, loss = 0.2889
+Epoch: 27, Iteration 140, loss = 0.1876
+Got 1585 / 1998 correct of val set (79.33)
+Epoch: 28, Iteration 0, loss = 0.2996
+Epoch: 28, Iteration 10, loss = 0.2755
+Epoch: 28, Iteration 20, loss = 0.2424
+Epoch: 28, Iteration 30, loss = 0.2506
+Epoch: 28, Iteration 40, loss = 0.1765
+Epoch: 28, Iteration 50, loss = 0.2628
+Epoch: 28, Iteration 60, loss = 0.2645
+Epoch: 28, Iteration 70, loss = 0.2491
+Epoch: 28, Iteration 80, loss = 0.1907
+Epoch: 28, Iteration 90, loss = 0.2177
+Epoch: 28, Iteration 100, loss = 0.1607
+Epoch: 28, Iteration 110, loss = 0.3201
+Epoch: 28, Iteration 120, loss = 0.4625
+Epoch: 28, Iteration 130, loss = 0.2359
+Epoch: 28, Iteration 140, loss = 0.2022
+Got 1599 / 1998 correct of val set (80.03)
+Epoch: 29, Iteration 0, loss = 0.2108
+Epoch: 29, Iteration 10, loss = 0.1966
+Epoch: 29, Iteration 20, loss = 0.2011
+Epoch: 29, Iteration 30, loss = 0.3017
+Epoch: 29, Iteration 40, loss = 0.2217
+Epoch: 29, Iteration 50, loss = 0.1312
+Epoch: 29, Iteration 60, loss = 0.3852
+Epoch: 29, Iteration 70, loss = 0.2619
+Epoch: 29, Iteration 80, loss = 0.3079
+Epoch: 29, Iteration 90, loss = 0.2258
+Epoch: 29, Iteration 100, loss = 0.1659
+Epoch: 29, Iteration 110, loss = 0.2332
+Epoch: 29, Iteration 120, loss = 0.2500
+Epoch: 29, Iteration 130, loss = 0.3616
+Epoch: 29, Iteration 140, loss = 0.2144
+Got 1607 / 1998 correct of val set (80.43)
+Got 1607 / 1998 correct of val set (80.43)
+
